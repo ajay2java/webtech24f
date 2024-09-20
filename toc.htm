@@ -4,11 +4,19 @@
 
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" href="indextoc.css" type="text/css"/>
 	<title></title>
 
 	<style>
 	/* Your styles go here */
-	
+		table, td {border:1px solid black; }
+		table {width: 75%; margin-right: auto; margin-left:auto; font-family: arial; text-align: center; color: navy; background:url(music-1.gif) repeat center fixed; border-collapse: collapse;}
+
+		tr#first {background: yellow;}
+		.col1 {width: 30%;}
+		.col2 {width: 70%;}
+		.cap {font-size: 3em; margin-bottom: 5%;}
+		h1 {text-align: center;}
 	
 	</style>
 	
@@ -22,14 +30,48 @@
 	<!-- Your HTML goes here -->
 	<h1>List of Everything I have done in Webtech</h1>
 	
-    <a href="cs1inclass.htm">CS-1 Inclass</a>
-	<a href="cs2inclass.htm">CS-2 Inclass</a>
-	<a href="cs3inclass.htm">CS-3 Inclass</a>
-	<a href="cs4inclass.htm">CS-4 Inclass</a>
-	<a href="ProjectProposal.htm">Project Proposal</a>
-	<a href="cs5inclass.htm">CS-5 Inclass</a>
-	<a href="cs6inclass.htm">CS-6 Inclass</a>	
-	<a href="cs7inclass.htm">CS-7 Inclass</a>
+
+	<table>
+		<caption class="cap"></caption>
+		<tr id="first">
+			<td class="col1">Session Number</td>
+			<td class="col2">Hyperlink</td>
+		</tr>
+		<tr>
+			<td class="col1">CS-1</td>
+			<td class="col2"><a href="cs1inclass.htm">CS-1 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-2</td>
+			<td class="col2"><a href="cs2inclass.htm">CS-2 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-3</td>
+			<td class="col2"><a href="cs3inclass.htm">CS-3 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-4</td>
+			<td class="col2"><a href="cs4inclass.htm">CS-4 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">Project Proposal</td>
+			<td class="col2"><a href="ProjectProposal.htm">Project Proposal</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-5</td>
+			<td class="col2"><a href="cs5inclass.htm">CS-5 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-6</td>
+			<td class="col2"><a href="cs6inclass.htm">CS-6 Inclass</a></td>
+		</tr>
+		<tr>
+			<td class="col1">CS-7</td>
+			<td class="col2"><a href="cs7inclass.htm">CS-7 Inclass</a></td>
+		</tr>
+	</table>
+		
+	
 	
   </body>
 </html>
