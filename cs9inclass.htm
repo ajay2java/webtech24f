@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>First Form Ever</title>
+
+	<style>
+	/* Your styles go here */
+    h1 {font-family: arial; color: navy; text-align: center;}
+    form {width: 50%; border: 1px lime solid; background-color: silver; margin-left: auto; margin-right: auto; padding-left: 8%; padding-top: 3%; padding-bottom: 3%;}
+    p {font-family: arial; color: navy;}
+  
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>My Class Form</h1>
+	<form id="fi">	
+        <p>Please Enter Your Name: <input type="text" name="myname" size="20" placeholder="Enter name"/></p>
+        <p>Please select your class: <select name="selectclass">
+            <option value="Empty">Please Select a Class</option>
+            <option value="FR">Freshman</option>
+            <option value="SO">Sophomore</option>
+            <option value="JR">Junior</option>
+            <option value="SR">Senior</option>
+            </select>
+        </p>
+        <p>Please select your gender:
+            Female:<input type="radio" name="sex" value="Female"/>
+            Male:<input type="radio" name="sex" value="Male"/>
+        </p>
+        <p>Please select the magazines that you read:
+            <br/>
+            <input type="checkbox" name="maga" value="Wall Street Journal"/>Wall Street Journal
+            <br/>
+            <input type="checkbox" name="maga1" value="Boston Globe"/>Boston Globe
+            <br/>
+            <input type="checkbox" name="maga2" value="New York Times"/>New York Times
+        </p>
+        <p>Please enter any suggestions for the course:
+            <textarea rows="10" cols="40" name="box" placeholder="Please type something here"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Submit"/>
+            <input type="reset" name="submit" value="Reset"/>
+        </p>
+    </form>
+  </body>
+</html>
