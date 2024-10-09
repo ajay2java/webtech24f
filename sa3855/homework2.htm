@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Ajay - Homework 2</title>
+
+	<style>
+	/* Your styles go here */
+		form {background:url(brick.gif); margin-right: 200px; margin-left: 200px; margin-top: 40px; margin-bottom: 40px; padding-bottom: 40px; padding-top: 40px; padding-right: 80px; padding-left: 80px; width: 60%;}
+		table, td {border:2px solid black; font-family: arial; font-size: 20px; text-align: center;}
+		.cap {font-family: "Lucida Grande"; font-size: 2em; color: navy; font-weight: bold; padding-bottom: 20px;}
+		img {width:45%;}
+		.col1 {width: 35%;}
+		.col2 {width: 20%;}
+		.col3 {width: 25%;}
+		.col4 {width: 20%;}
+		p {text-align: center;}
+		#button1 {height: 30px; background-color: green;}
+		#button2 {height: 30px; background-color: yellow;}
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<form id="fi">
+		<table>
+			<caption class="cap">Catalog of Sweaters</caption>
+			<tr id="first">
+				<td class="col1">Product Image</td>
+				<td class="col2">Product Price</td>
+				<td class="col3">Product Selection</td>
+				<td class="col4">Product Quantity</td>
+			</tr>
+			<tr>
+				<td class="col1"><img src="redsweater.jpg" alt="Red Sweater Image" title="pic"/></td>
+				<td class="col2">$35.00</td>
+				<td class="col3"><input type="radio" name="sweat" value="RedSweat"/>Red Sweater</td>
+				<td class="col4">Quantity:<textarea rows="1" cols="10" name="box" placeholder=""></textarea></td>
+			</tr>
+			<tr>
+				<td class="col1"><img src="bluesweater.jpg" alt="Blue Sweater Image" title="pic"/></td>
+				<td class="col2">$45.00</td>
+				<td class="col3"><input type="radio" name="sweat" value="BluSweat"/>Blue Sweater</td>
+				<td class="col4">Quantity:<textarea rows="1" cols="10" name="box" placeholder=""></textarea></td>
+			</tr>
+			<tr>
+				<td class="col1"><img src="whitesweater.jpg" alt="White Sweater Image" title="pic"/></td>
+				<td class="col2">$30.00</td>
+				<td class="col3"><input type="radio" name="sweat" value="WhiSweat"/>White Sweater</td>
+				<td class="col4">Quantity:<textarea rows="1" cols="10" name="box" placeholder=""></textarea></td>
+			</tr>
+		</table>
+		<p>
+            <input id = "button1" type="submit" name="submit" value="Submit Selections"/>
+            <input id = "button2" type="reset" name="submit" value="Clear Selections"/>
+        </p>
+	</form>
+  </body>
+</html>
