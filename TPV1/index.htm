@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+
+	<style>
+	/* Your styles go here */
+        body {background-image:url(starrysky.jpg); 
+        background-position: center; 
+        background-repeat: repeat; 
+        background-attachment: fixed;}
+        img#hey {width: 100%; margin-top: -5%;}
+        div#banner {background:url(animate_bg.jpg); background-position: center; background-size: 90%; padding: 4%;}
+        h1#heading {color:orange; font-family: arial; font-weight: bold; text-align: center;}
+        .row {color: white;}
+        video {width: 30%; margin: auto;}
+        h1, h2 {text-align: center; margin-bottom: 0%;}
+        h1#first {font-family: cursive; font-size: xx-large;}
+
+        img#justFrame {border:2px ridge teal; display:block; margin:auto; width:200px; margin-bottom:100px;}
+        p {text-align:center;}
+        ol {list-style-type: square; font-size: x-large;}
+        ul {list-style-type: number;}
+        ol#sub {list-style-type: circle;}
+
+
+
+        /* Start of the menu styles*/
+        .topnav {
+            background-color: skyblue;
+            overflow: hidden;
+            font-family: Lucida Handwriting;
+        }
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .active {
+            background-color: green;
+            color: white;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+        .dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 79px;
+            text-decoration: none;
+            text-align: left;
+            font-size:0.75em;
+        }
+        #drop2 {
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: gray;
+            color: black;
+        }
+        .dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropdownbutton {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        @media screen and (max-width:750px)
+        {
+            .row{flex-direction:column;}
+            .about{width:80%; margin-right:auto; margin-left:auto;}
+        }
+        
+    </style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function showVid(ars)
+            {
+                const myimg = document.getElementById("justFrame");
+                if (ars == "T")
+                {
+                    myimg.src = "na.JPG";
+                    myimg.alt = "Trump Image";
+                    myimage.title = "Animated Trump";
+                }
+                else if (ars == "S")
+                {
+                    myimg.src = "spongebob_ani.JPG";
+                    myimg.alt = "SponeBob Image";
+                    myimage.title = "Animated SpongeBob";
+                }
+                else if (ars == "B")
+                {
+                    myimg.src = "bulbasaur_ani.JPG";
+                    myimg.alt = "Bulbasaur Image";
+                    myimage.title = "Animated Bulbasaur";
+                }
+                else
+                {
+                    myimg.src = "na.JPG";
+                    myimg.alt = "LeBron Image";
+                    myimage.title = "Animated LeBron";
+                }
+            }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+        <div id="banner">
+            <h1 id="heading">My Creative Mind</h1>
+        </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm" class="active">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="pop_design.htm">Pop-Culture</a>
+                    <a href="politics_design.htm">Politics</a>
+                    <a href="sports_design.htm">Sports</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="pop_ani.htm">Pop-Culture</a>
+                    <a href="politics_ani.htm">Politics</a>
+                    <a href="sports_ani.htm">Sports</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="contactme.htm">Contact Me</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> 
+	
+        <div class="row">
+            <h1 id="first">Get ready...to be Amazed!</h1>
+            <p>
+                <video controls>
+                    <source src="spongebobvid.mp4" type="video/mp4"/>
+                </video>
+            </p>
+            <h1> Click on the Character below to see the Animated Version</h1>
+            <h2> (at this point, only SpongeBob & Bulbasaur have an animated Image...)</h2>
+            <img id="justFrame" src="questionmark.jpg" alt="Show Image Here" title=""/>
+            <p id="para">
+                <map name="peoples" id="peeps">
+                    <area shape="rect" coords="2,9,350,397" id="T" onclick="showVid(this.id)" alt="Trump"/>
+                    <area shape="rect" coords="357,12,610,393" id="S" onclick="showVid(this.id)" alt="Spongebob"/>
+                    <area shape="rect" coords="620,13,932,393" id="B" onclick="showVid(this.id)" alt="Bulbasaur"/>
+                    <area shape="rect" coords="944,14,1385,392" id="L"onclick="showVid(this.id)" alt="Lebron"/>
+                </map>
+                <img src="animates.JPG" alt="Characters Image" title="Click on a character to see a video" id="hey" usemap = "#peoples"/>
+            </p>
+            <p>
+                <ol>
+                    <li>Genres:
+                        <ul>
+                            <li>Cartoon
+                                <ol id="sub">
+                                    <li>SpongeBob</li>
+                                </ol>
+                            </li>
+                            <li>Gaming
+                                <ol id="sub">
+                                    <li>Bulbasaur</li>
+                                </ol>
+                            </li>
+                            <li>Pop-Culture
+                                <ol id="sub">
+                                    <li>TBD :)</li>
+                                </ol>
+                            </li>
+                            <li>Politics
+                                <ol id="sub">
+                                    <li>Donald Trump</li>
+                                </ol>
+                            </li>
+                            <li>Sports
+                                <ol id="sub">
+                                    <li>LeBron James</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </p>
+        </div>
+
+        <audio autoplay loop>
+            <source src="chillvibes.mp3" type="audio/mp3"/>
+        </audio>
+  </body>
+</html>
