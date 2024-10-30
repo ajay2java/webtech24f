@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Homework 3 - processing forms</title>
+
+	<style>
+	/* Your styles go here */
+    form {background-color:silver; font-family:Arial; color:Navy;
+    padding-left:50px; padding-top:20px; padding-bottom:20px;
+    margin-right:auto; margin-left:auto; width:60%;}
+    .but {width:200px; height:60px; background-color:magenta; color:black;}
+    p#desc {margin:50px 200px; font-family:cursive; }
+    h3 {font-family:lucida handwriting; font-size:3em; text-align:center;}
+	#out {font-family: Arial; }
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+		function calculateAmount() {
+			const product = document.getElementById('product').value.trim().toLowerCase();
+			const quantity = document.getElementById('quantity').value.trim();
+			const amountDueField = document.getElementById('amountDue');
+		
+			const prices = {
+				'milk': 3.50,
+				'apple': 0.99,
+				'fish': 5.99
+			};
+		
+			if (!product || !quantity) {
+				alert('Please fill in both the product and quantity fields.');
+				return;
+			}
+		
+			if (!prices.hasOwnProperty(product)) {
+				alert('Please enter a valid product: Milk, Apple, or Fish.');
+				return;
+			}
+		
+			if (isNaN(quantity) || quantity <= 0) {
+				alert('Please enter a valid numerical value for quantity.');
+				return;
+			}
+		
+			const amountDue = prices[product] * quantity;
+			amountDueField.value = `$${amountDue.toFixed(2)}`;
+		}
+		
+		function clearForm() {
+			document.getElementById('productForm').reset();
+			document.getElementById('amountDue').value = '';
+		}
+	
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+<h3> Homework 3</h3>
+<p id="desc">
+    The form given below has 3 fields. Let us assume that the user will type in
+    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
+    using any mix of cases, so be aware. You need to check to ensure that the user
+    enters a value. If it is not one of these 3, let the user know. 
+    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
+	(you may assume that 0 is a valid quality) and that the value is numeric. 
+    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
+    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+    in the third field. All of this should be done when the appropriate 
+    button is pressed. The amount must be shown with 2 decimal places and prefixed with
+	a $ (dollar) sign.     
+</p>
+
+
+<form id="productForm">
+	<p>
+		<label for="product"></label>
+		<input type="text" id="product" name="product" size="20" placeholder="Enter product...">
+		&nbsp; &nbsp;&nbsp;
+		
+		<label for="quantity"></label>
+		<input type="text" id="quantity" name="quantity" size="20" placeholder="Enter quantity..">
+	</p>
+	<p>
+		<label for="amountDue"></label>
+		<input type="text" id="amountDue" name="amountDue" size="20" readonly placeholder="show amount due">
+	</p>
+	<p>
+		<button type="button" class="but" onclick="calculateAmount()">What Do I Owe</button>
+		&nbsp; &nbsp;&nbsp;
+		<button type="button" class="but" onclick="clearForm()">Clear All</button>
+	</p>
+</form>
+<script src="script.js"></script>
+	
+<h2># of Prompts: 2</h2>
+<h2>Prompt 1:</h2>
+<p>"I want html, css, and javascript code which produces a form with 3 fields (product, quantity, & amount due) along with two buttons (titles: 1) What Do I Owe 2) Clear All). The user should be able to input the name of a product as well as the quantity, to get the total cost of the product (located in the amount due field) when they press the "What do I Owe" button. Here's the catch: in the product field, the user can only enter in one of the three options: Milk ($3.50 each), Apple ($0.99 each), or Fish ($5.99 each). If they enter anything else, they should get an message informing them of their error. In the quantity field, the user should only input a numerical value, and if they do otherwise, they should receive an error message. Moreover, the product or quantity fields must be filled with something, otherwise the user should receive an error message. Likewise, the user should not enter anything into the amount due field, otherwise they should also receive an error message in that regard. All outputs in the amount due box must be rounded to two decimal points and feature a dollar sign right infront of the number."</p>
+<h3 id="out">Output:</h3>
+<p>
+	<img src="prompt1e1.jpg" alt="prompt11" title="PromptImage" id="promptI"/>
+	<br/>
+	<br/>
+	ERROR: The error here is that the code is too case sensitive to the input. When I enter "fish" with a lowercase "f," I get an error message. However, only when I enter "Fish" with an uppercase "F," do I get an output.
+	<br/>
+	<br/>
+	<img src="prompt1e2.jpg" alt="prompt12" title="PromptImage" id="promptI"/>
+</p>
+
+<h2>Prompt 2:</h2>
+<p>"Modify the code so that the code isn't too case sensitive to the user's input. What I mean is that with this current code, for example, the user must input 'Fish' with a capital 'F' to get an output. If the user enters 'fish', then an error message will show. Please change the code so you aren't too case sensitive in that regard."</p>
+<h3 id="out">Output:</h3>
+<p>
+	<img src="prompt2e1.jpg" alt="prompt21" title="PromptImage" id="promptI"/>
+	<br/>
+	As you can see right here, the code fully works as I am able to enter the right input in a different way ("APPLE" in the above picture) and still get the correct output.
+</p>
+<h2>Reflection:</h2>
+<p>
+	After integrating copilot's solution to provided template, one main difference stood out to me. In my solution, I had an alert message display when someone entered something into the "amount due" box. Clearly, users should not enter info into this area, which is why I covered this potential scenario with code. However, with CoPilot, it was able to write code that altogether prevented someone from even entering anything into the "amount due" field, which seems even more convenient. I would really like to learn how to do this because while my code performs all the right functions, the user has to erase the old answer from the amount due section to not get an alert if they try to calculate for a different item. Preventing users from entering something in the amount due field equates to one less condition I need to cover, making matters simpler.
+</p>
+  </body>
+</html>
