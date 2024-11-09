@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Describes the author of the animation website"/>
+    <meta name="keywords" content="animation, Ajay Subramanian, Babson College, animation creator, project for Web Technologies"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */        
+        #head {text-align: center; font-family: cursive; color: mediumturquoise;}
+        img#justFrame {display:block; margin:auto; width:400px; margin-bottom:50px;}
+        #head1 {padding-left: 5%; font-size: xx-large; font-family: impact; color: skyblue;}
+        #head2 {text-align: center; font-family: cambria;}
+        #head3 {float: right; color: orange;}
+        #head4 {padding-left: 5%; font-family: cursive;}
+        #head5 {padding-left: 5%; font-family: Arial;}
+        #capt {padding-left: 5%; padding-right: 5%; font-family: "times new roman"; text-align: center; color: lightgreen;}
+        img#linkd {display: block; margin: auto; width: 10%;}
+
+        
+        h4 {padding-left: 50px; padding-right: 50px;}
+        form {width: 50%; border: 10px mediumaquamarine solid; background-color: none; margin-left: auto; margin-right: auto; padding-left: 8%; padding-top: 3%; padding-bottom: 3%; margin-top: 3%;}
+
+
+        
+        
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        function abtMe()
+        {
+            var header, userinp, myimg;
+            header = document.getElementById("head");
+            header.innerHTML = "";
+            myimg = document.getElementById("justFrame");
+            var head1 = document.getElementById("head1");
+            var head2 = document.getElementById("head2");
+            var head3 = document.getElementById("head3");
+            var head4 = document.getElementById("head4");
+            var head5 = document.getElementById("head5");
+            var store1 = document.getElementById("capt");
+            var linkn = document.getElementById("linkd");
+            userinp = prompt("Please enter a number between 1 and 4 to find out something about me...");
+            if ((userinp == "") || (isNaN(userinp) == true) || (userinp < 1) || (userinp > 4))
+            {
+                alert("Please enter in a numerical value between 1 and 4!");
+                myimg.src = "questmark.gif";
+                header.innerHTML = "Click on the '?' below & Choose a # between 1-4 to learn something about me...";
+                head1.innerHTML = "";
+                head2.innerHTML = ""
+                head3.innerHTML = "";
+                head4.innerHTML = "";
+                head5.innerHTML = "";
+                store1.innerHTML = "<br/>";
+                linkn.style.margin = "auto";
+            }
+            else if (userinp == "1")
+            {
+                myimg.src = "ajay_pic.JPG";
+                myimg.alt = "Ajay Image";
+                myimg.title = "Ajay's Professional Picture";
+                
+                head1.innerHTML = "Name: Ajay Subramanian";
+                head2.innerHTML = ""
+                head3.innerHTML = "";
+                head4.innerHTML = "Graduation Year: 2025";
+                head5.innerHTML = "Motivation for this Website:";
+                store1.innerHTML = "My motivation for creating this website is to showcase my artistic imaginations as a rising animator. I first got into animation back in 2022 when I created simple 2-D animations through my simple video editor. Fastforwarding to summer 2024, I grew my skills into become proficient with Adobe Illustrator & Adobe Animation to start creating more advanced 2-D animations. While I'm clearly not very advanced at this moment, I still find joy in showcasing how far I've come, especially in learning a skill I was once afraid of. For me personally, I want this website to send a message that you can do anything by which you put your mind to! Nothing is impossible, whether it be coding or creating video animations!";
+            }
+            else if (userinp == "2")
+            {
+                myimg.src = "ajay_view.jpg";
+                myimg.alt = "Ajay Image";
+                myimg.title = "Ajay at New Haven";
+
+                head1.innerHTML = "Favorite Quote:";
+                head2.innerHTML = "''Dream big, stay positive, work hard and enjoy the journey.''";
+                head3.innerHTML = "- Urijah Faber";
+                head3.style.paddingRight = "20%";
+                head4.innerHTML = "<br/>";
+                head5.innerHTML = "<br/>";
+                store1.innerHTML = "";
+            }
+            else if (userinp == "3")
+            {
+                myimg.src = "ajay_chess.jpg";
+                myimg.alt = "Ajay Image";
+                myimg.title = "Ajay representing the Babson Chess Club at the 2024 club fair";
+
+                head1.innerHTML = "Favorite Babson Experience:";
+                head2.innerHTML = "Being President of the Babson Chess Club!!!";
+                head3.innerHTML = "";
+                head4.innerHTML = "";
+                head5.innerHTML = "";
+                store1.innerHTML = "As President, I helped to grow the club from an average of 5 members in Spring 2023 to now over 30 members per week! <br/>My purpose for creating the Chess Club was to unite a community meant to spread good vibes through spending Thursday evenings with one another having fun playing the legendary game!";
+            }
+            else
+            {
+                myimg.src = "ajay_teachingchess.jpg";
+                myimg.alt = "Ajay Image";
+                myimg.title = "Ajay teaching chess at LeBron's School";
+
+                head1.innerHTML = "Fun Fact:"
+                head2.innerHTML = "I was a former Elementary & Middle School Chess Teacher at LeBron James' IPromise School!"
+                head3.innerHTML = "";
+                head4.innerHTML = "";
+                head5.innerHTML = "";
+                store1.innerHTML = "Before Covid, I helped to start the school's chess program and I served as a weekly mentor to the elementary & middle school kids, teaching classes of 25-30 kids about chess theory.";
+            }
+        }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm" class="active">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> <!-- this closes the topnav div -->
+	
+        <div class="row">
+            <h2 id="head">Click on the '?' below & Choose a # between 1-4 to learn something about me...</h2>
+            <img id="justFrame" onclick="abtMe()" src="questmark.gif" alt="qmarkgif" title="Question Mark gif"/>
+            <h2 id="head1"></h2>
+            <h2 id="head2"></h2>
+            <h2 id="head3"></h2>
+            <h2 id="head4"></h2>
+            <h2 id="head5"></h2>
+            <p>
+                <h4 id="capt"></h4>
+            </p>
+            <map name="linkedinLogo">
+                <area alt="Ajay's Linkedin Page" href="https://www.linkedin.com/in/ajay-subramanian/" coords="5,5,1022,1023" shape="rect">
+            </map>
+            <img id="linkd" src="linkedIn_logo.png" alt="linkedin logo" title="Linkedin" usemap = "#linkedinLogo"/>
+
+
+            <form id="fi">	
+                <p>Please Enter Your Name: <input type="text" name="myname" size="20" placeholder="Enter name"/></p>
+                <p>Topic of Contact: <select name="selectclass">
+                    <option value="Empty">Please Select a Topic</option>
+                    <option value="An">Animation</option>
+                    <option value="So">Softwares</option>
+                    <option value="Am">About Me</option>
+                    <option value="Ot">Other</option>
+                    </select>
+                </p>
+                <p>Are you a student?
+                    Yes<input type="radio" name="yn" value="Yes"/>
+                    No<input type="radio" name="yn" value="No"/>
+                </p>
+                <p>Feel free to add in your comments and/or any questions you have about me or my work:
+                    <textarea rows="10" cols="40" name="box" placeholder="Please type something here"></textarea>
+                </p>
+                <p>
+                    <input type="submit" name="submit" value="Submit"/>
+                    <input type="reset" name="submit" value="Reset"/>
+                </p>
+            </form>
+        </div>
+  </body>
+</html>

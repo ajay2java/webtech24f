@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+
+	<style>
+	/* Your styles go here */
+        h1 {text-align: center;}
+        #header {padding-left: 3%; font-family: cursive; color: lightblue;}
+
+        table {display: block; margin:auto; width:50%;}
+        table, td {border:1px solid white;}
+        td {padding: 10px;}
+        table img {width:100%;}
+        img#big {display: block; margin: auto; width:70%;}
+        #cap {margin-left: 3%; margin-right: 3%; text-align: center; font-family: "cambria";}
+        #s1 {box-shadow: 0px 0px 10px 10px lightblue;}
+
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        var cap1 = 0;
+        var cap2 = "";
+        function prezPic(x)
+            {
+                var mytabimg, myimg, mybigimage, myhead, mycap;
+                myimg = document.getElementById("character");
+                mybigimage = document.getElementById("big");
+                myhead = document.getElementById("header");
+                mycap = document.getElementById("cap");
+                if (cap1 == 0)
+                {
+                    if (x != "s1")
+                    {
+                        document.getElementById("s1").style.boxShadow = "none";
+                        mytabimg = document.getElementById(x);
+                        mytabimg.style.boxShadow = "0px 0px 10px 10px lightblue";
+                        cap2 = x;
+                        cap1 += 1;
+                    }
+                }
+                else
+                {
+                    mytabimg = document.getElementById(cap2);
+                    mytabimg.style.boxShadow = "none";
+                    mytabimg = document.getElementById(x);
+                    mytabimg.style.boxShadow = "0px 0px 10px 10px lightblue";
+                    cap2 = x;
+                }
+                 
+                if (x == "s1")
+                {
+                    mybigimage.src = "ajay1.png";
+                    myhead.innerHTML = "1) Paste a transparent traceable picture from the web.";
+                    mycap.innerHTML = "Trace over a head of the actual person.";
+                }
+                else if (x == "s2")
+                {
+                    mybigimage.src = "ajay2.png";
+                    myhead.innerHTML = "2) Continue for the eyes and mouth!";
+                }
+                else if (x == "s3")
+                {
+                    mybigimage.src = "ajay3.png";
+                    myhead.innerHTML = "3) Copy the strands to finish the head of hair.";
+                }
+                else if (x == "s4")
+                {
+                    mybigimage.src = "ajay4.png";
+                    myhead.innerHTML = "4) Draw out the base of the character via an internet image!";
+                }
+                else
+                {
+                    mybigimage.src = "ajay5.png";
+                    myhead.innerHTML = "5) Continue tracing & organizing the layers!";
+                    mycap.innerHTML = "And...WOWWWW!!! We have our Ajay character! It came together so smoothly!!!";
+                }
+            }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm" class="active">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+        <div class="row">
+            <h1>Ajay Character Design:</h1>
+
+            <h2 id="header">1) Paste a transparent traceable picture from the web.</h2> <!-- This is the image title -->
+            <img id="big" src="ajay1.png" alt="Ajay 1" title="Ajay Step 1" /> <!-- This is the larger image -->
+            <h3 id="cap">This image will be switched beween visible & invisible, to be simply used as a benchmark for the actual character we will be drawing.</h3> <!-- This is the image caption -->
+            <table id="character">
+                <tr>
+                <td> <img id="s1" onclick="prezPic(this.id)" src="ajay1.png" alt="Ajay 1" title="Ajay Step 1"/> </td>
+                <td> <img id="s2" onclick="prezPic(this.id)" src="ajay2.png" alt="Ajay 2" title="Ajay Step 2"/> </td>
+                <td> <img id="s3" onclick="prezPic(this.id)" src="ajay3.png" alt="Ajay 3" title="Ajay Step 3"/> </td>
+                <td> <img id="s4" onclick="prezPic(this.id)" src="ajay4.png" alt="Ajay 4" title="Ajay Step 4"/> </td>
+                <td> <img id="s5" onclick="prezPic(this.id)" src="ajay5.png" alt="Ajay 5" title="Ajay Step 5"/> </td>
+               </tr>
+              </table>
+        </div>
+  </body>
+</html>

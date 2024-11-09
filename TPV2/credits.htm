@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Shows credits page for my animation website"/>
+    <meta name="keywords" content="animation, animation credits, animated content"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+
+    h2 {color: red; font-family: cursive; font-size: xx-large; margin-left: 25px; margin-right: 100px;}
+    h3 {color: lightskyblue; font-family: cursive; font-size: large; margin-left: 100px; margin-right: 100px;}
+    img#asig {float: right; width: 20%}
+       
+        
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm" class="active">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+        <div class="row">
+           <h2>All intellectual property at this website is in the public domain or the property of the site owner.</h2>
+           <h3>I, Ajay Subramanian pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and have observed all the restrictions and limitations specified therein.</h3>
+
+           <img id="asig" src="ajay_sig.png" alt="Sig" title="Ajay's Signature"/>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Ajay Subramanian - My Animation Portfolio"/>
+    <meta name="keywords" content="animation, animated characters, Ajay's animations, spongbob animated, learning animation"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+        
+        video {width: 30%; margin: auto;}
+        h1 {text-align: center; margin-bottom: 0%;}
+        h1#first {font-family: cursive; font-size: xx-large;}
+        h1#second {font-family: cambria;}
+
+
+        img#justFrame {border:2px ridge teal; display:block; margin:auto; width:350px; margin-bottom:100px;}
+        img#Aj {width:200px; position:absolute; top:1100px;}
+        img#Sponge {width:200px; position:absolute; top:1350px;}
+        img#Bulb {width:200px; position:absolute; top:1600px;}
+        p {text-align:center;}
+        #vidz {width: 60%;}
+
+
+
+
+       
+        
+    </style>
+	<script type="text/javascript">
+		var pos = 0;
+        var pos1 = 1000;
+        var tr1 = "false";
+        var tr2 = "false";
+
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function moveImage()
+        {
+            var ch1, ch2, ch3;
+			ch1 = document.getElementById("Aj");
+            ch2 = document.getElementById("Sponge");
+            ch3 = document.getElementById("Bulb");
+			ch1.style.left = pos + "px";
+            ch2.style.left = pos1 + "px";
+            ch3.style.left = pos + "px";
+            if (tr1 == "false")
+            {
+                pos = pos + 1; /*pos += 1; or... ++pos; */
+                pos1 = pos1 - 1;
+            }
+            else
+            {
+                pos = pos - 1; /*pos -= 1; or... --pos; */
+                pos1 = pos1 + 1;
+            }
+			
+			if (pos == 1000)
+				tr1 = "true";
+            if (pos == 0)
+                tr1 = "false";
+            if (pos1 == 0)
+                tr2 = "true";
+            if (pos1 == 1000)
+                tr2 = "false";
+            setTimeout("moveImage()", 10);
+        }
+
+        function showVid(ars)
+            {
+                const myimg = document.getElementById("justFrame");
+                if (ars == "Sponge")
+                {
+                    myimg.src = "spongebob_ani.JPG";
+                    myimg.alt = "SponeBob Image";
+                    myimage.title = "Animated SpongeBob";
+                }
+                else if (ars == "Bulb")
+                {
+                    myimg.src = "bulbasaur_ani.JPG";
+                    myimg.alt = "Bulbasaur Image";
+                    myimage.title = "Animated Bulbasaur";
+                }
+                else
+                {
+                    myimg.src = "self_ani.JPG";
+                    myimg.alt = "Ajay Image";
+                    myimage.title = "Animated Ajay";
+                }
+            }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body onload="moveImage()">
+	<!-- Your HTML goes here -->
+        <div id="banner">
+            <h1 id="heading">My Creative Mind</h1>
+        </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm" class="active">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> 
+	
+        <div class="row">
+            <h1 id="first">Get ready...to be Amazed!</h1>
+            <p>
+                <video id="vidz" autoplay controls loop>
+                    <source src="sayhi.mp4" type="video/mp4"/>
+                </video>
+            </p>
+            <h1 id="second"> Click on the Character below to see the Animated Version</h1>
+            <br/>
+            <img id="justFrame" src="questionmark.jpg" alt="qmark" title="Question Mark"/>
+
+            <img id="Aj" onclick="showVid(this.id)" src="ajay_head.png" alt="ajayhead" title="Ajay's head"/>
+            <br/>
+            <img id="Sponge" onclick="showVid(this.id)" src="sponge_head.png" alt="spongehead" title="SpongeBob's head"/>
+            <br/>
+            <img id="Bulb" onclick="showVid(this.id)" src="bulbasaur_head.png" alt="bulbhead" title="Bulbasaur's head"/>
+            <br/>
+            <br/>
+            
+        </div>
+
+        <audio autoplay loop>
+            <source src="chillvibes.mp3" type="audio/mp3"/>
+        </audio>
+  </body>
+</html>

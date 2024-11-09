@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Web Tech Term Project</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Illustrates how to animate SpongeBob in Adobe Animator"/>
+    <meta name="keywords" content="animation, animation software, adobe animator, SpongeBob, animating characters"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+        h1 {text-align: center;}
+        #header {padding-left: 3%; font-family: cursive; color: lightblue;}
+
+        table {display: block; margin:auto; width:50%;}
+        table, td {border:1px solid white;}
+        td {padding: 10px;}
+        table img {width:100%;}
+        img#big {display: block; margin: auto; width:70%;}
+        #cap {margin-left: 3%; margin-right: 3%; text-align: center; font-family: "cambria";}
+        #s1 {box-shadow: 0px 0px 10px 10px yellow;}
+    
+        video {display: block; margin: auto; width: 30%; margin: auto;}
+        
+        
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        var cap1 = 0;
+        var cap2 = "";
+        function prezPic(x)
+            {
+                var mytabimg, myimg, mybigimage, myhead, mycap;
+                myimg = document.getElementById("character");
+                mybigimage = document.getElementById("big");
+                myhead = document.getElementById("header");
+                mycap = document.getElementById("cap");
+                if (cap1 == 0)
+                {
+                    if (x != "s1")
+                    {
+                        document.getElementById("s1").style.boxShadow = "none";
+                        mytabimg = document.getElementById(x);
+                        mytabimg.style.boxShadow = "0px 0px 10px 10px yellow";
+                        cap2 = x;
+                        cap1 += 1;
+                    }
+                }
+                else
+                {
+                    mytabimg = document.getElementById(cap2);
+                    mytabimg.style.boxShadow = "none";
+                    mytabimg = document.getElementById(x);
+                    mytabimg.style.boxShadow = "0px 0px 10px 10px yellow";
+                    cap2 = x;
+                }
+                 
+                if (x == "s1")
+                {
+                    mybigimage.src = "sponge_a1.png";
+                    mybigimage.alt = "Sponge 1";
+                    mybigimage.title = "Spongebob Step 1";
+                    myhead.innerHTML = "1) Open Adobe Character Animator";
+                    mycap.innerHTML = "Click on New Project and name it accordingly to open a new template.";
+                }
+                else if (x == "s2")
+                {
+                    mybigimage.src = "sponge_a2.png";
+                    mybigimage.alt = "Sponge 2";
+                    mybigimage.title = "Spongebob Step 2";
+                    myhead.innerHTML = "2) Import Character Drawing from Adobe Illustrator (via 'File' on top right)";
+                    mycap.innerHTML = "After we click on 'New Scene' we have our character centralized.";
+                }
+                else if (x == "s3")
+                {
+                    mybigimage.src = "sponge_a3.png";
+                    mybigimage.alt = "Sponge 3";
+                    mybigimage.title = "Spongebob Step 3";
+                    myhead.innerHTML = "3) Modify size of Character!";
+                    mycap.innerHTML = "In the bottom right, we can make the image a more suitable size by playing with the 'Scale' tool.";
+                }
+                else if (x == "s4")
+                {
+                    mybigimage.src = "sponge_a4.png";
+                    mybigimage.alt = "Sponge 4";
+                    mybigimage.title = "Spongebob Step 4";
+                    myhead.innerHTML = "4) Go to 'Rig' at the top left";
+                    mycap.innerHTML = "We will go part by part to ensure the dot is placed on the right area. Click on each part of the character and if the dot isn't placed correctly, then we drag it to the correct spot.";
+                }
+                else if (x == "s5")
+                {
+                    mybigimage.src = "sponge_a5.png";
+                    mybigimage.alt = "Sponge 5";
+                    mybigimage.title = "Spongebob Step 5";
+                    myhead.innerHTML = "5) Lets start adding the function to the limbs";
+                    mycap.innerHTML = "We start with the right leg, and essentially, just drag the dot to the same area I dragged it to in the pic. This is standard for all leg drawings. Moreover, utilize the dot tool in the bottom right to put dots on each corresponding limb in the picture to the right. For this example, we will label the knees, ankle, and toes, while clicking on the corresponding dots in the demo image to label these dots.";
+                }
+                else if (x == "s6")
+                {
+                    mybigimage.src = "sponge_a6.png";
+                    mybigimage.alt = "Sponge 6";
+                    mybigimage.title = "Spongebob Step 6";
+                    myhead.innerHTML = "6) Repeat this with the other legs & the arms.";
+                    mycap.innerHTML = "";
+                }
+                else if (x == "s7")
+                {
+                    mybigimage.src = "sponge_a7.png";
+                    mybigimage.alt = "Sponge 7";
+                    mybigimage.title = "Spongebob Step 7";
+                    myhead.innerHTML = "7) Now we create triggers!";
+                    mycap.innerHTML = "If we want SpongeBob to blink when we press the B key, then we drag the right blink & left blink parts into the Triggers section and we label them with a 'B' key.";
+                }
+                else if (x == "s8")
+                {
+                    mybigimage.src = "sponge_a8.png";
+                    mybigimage.alt = "Sponge 8";
+                    mybigimage.title = "Spongebob Step 8";
+                    myhead.innerHTML = "8) Press the plus sign at the top & add the walking behavior!";
+                    mycap.innerHTML = "";
+                }
+                else if (x == "s9")
+                {
+                    mybigimage.src = "sponge_a9.png";
+                    mybigimage.alt = "Sponge 9";
+                    mybigimage.title = "Spongebob Step 9";
+                    myhead.innerHTML = "9) Switch mode to ''Left & Right Arrow Keys''!";
+                    mycap.innerHTML = "This way, SpongeBob will only move when we WANT it to move, or when we press the right or left key! This is important for when we record.";
+                }
+                else
+                {
+                    mybigimage.src = "sponge_a10.png";
+                    mybigimage.alt = "Sponge 10";
+                    mybigimage.title = "Spongebob Step 10";
+                    myhead.innerHTML = "10) Go back to regular screen, add a background if you want.... and record!";
+                    mycap.innerHTML = "Click record for our character and play with the triggers - i.e., pressing 'B' to blink at anytime, and the Left & Right arrow keys to walk at any given time! <br/> And...WOWWWW!!! We have our SpongeBob Animation! It looks amazing!!!";
+                }
+            }     
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm" class="active">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+        <div class="row">
+            <h1>SpongeBob Character Animation:</h1>
+
+            <h2 id="header">1) Open Adobe Character Animator</h2> <!-- This is the image title -->
+            <img id="big" src="sponge_a1.png" alt="Sponge 1" title="Spongebob Step 1" /> <!-- This is the larger image -->
+            <h3 id="cap">Click on New Project and name it accordingly to open a new template.</h3> <!-- This is the image caption -->
+            <table id="character">
+                <tr>
+                <td> <img id="s1" onclick="prezPic(this.id)" src="sponge_a1.png" alt="Sponge 1" title="Spongebob Step 1"/> </td>
+                <td> <img id="s2" onclick="prezPic(this.id)" src="sponge_a2.png" alt="Sponge 2" title="Spongebob Step 2"/> </td>
+                <td> <img id="s3" onclick="prezPic(this.id)" src="sponge_a3.png" alt="Sponge 3" title="Spongebob Step 3"/> </td>
+                <td> <img id="s4" onclick="prezPic(this.id)" src="sponge_a4.png" alt="Sponge 4" title="Spongebob Step 4"/> </td>
+                <td> <img id="s5" onclick="prezPic(this.id)" src="sponge_a5.png" alt="Sponge 5" title="Spongebob Step 5"/> </td>
+               </tr>
+               <tr>
+                <td> <img id="s6" onclick="prezPic(this.id)" src="sponge_a6.png" alt="Sponge 6" title="Spongebob Step 6"/> </td>
+                <td> <img id="s7" onclick="prezPic(this.id)" src="sponge_a7.png" alt="Sponge 7" title="Spongebob Step 7"/> </td>
+                <td> <img id="s8" onclick="prezPic(this.id)" src="sponge_a8.png" alt="Sponge 8" title="Spongebob Step 8"/> </td>
+                <td> <img id="s9" onclick="prezPic(this.id)" src="sponge_a9.png" alt="Sponge 9" title="Spongebob Step 9"/> </td>
+                <td> <img id="s10" onclick="prezPic(this.id)" src="sponge_a10.png" alt="Sponge 10" title="Spongebob Step 10"/> </td>
+               </tr>
+            </table>
+
+            <br/>
+            <br/>
+            <h1 id="first">The Final Product:</h1>
+            <p>
+                <video controls>
+                    <source src="spongebobvid.mp4" type="video/mp4"/>
+                </video>
+            </p>
+        </div>
+  </body>
+</html>
