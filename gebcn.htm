@@ -19,6 +19,30 @@
         {
             const myodds = document.getElementsByClassName("odd");
             const myevens = document.getElementsByClassName("even");
+            var x; 
+            for (x=0; x < myodds.length; ++x)
+            {
+              myodds[x].style.backgroundColor = "lime";
+            }
+            for (x=0; x < myevens.length; ++x)
+            {
+              myevens[x].style.backgroundColor = "yellow";
+            }
+        }
+
+        function doEven()
+        {
+            const myevens = document.getElementsByClassName("even");  
+            const myodds = document.getElementsByClassName("odd");
+            var x; 
+            for (x=0; x < myevens.length; ++x)
+            {
+              myevens[x].style.backgroundColor = "skyblue";
+            }
+            for (x=0; x < myodds.length; ++x)
+            {
+              myodds[x].style.backgroundColor = "orange";
+            }
         }
     </script>
 	
@@ -32,19 +56,19 @@
 	 <div class="odd" onclick="doOdd()">
 
      </div>
-     <div class="even">
+     <div class="even" onclick="doEven()">
 
      </div>
      <div class="odd" onclick="doOdd()">
         
      </div>
-     <div class="even">
+     <div class="even" onclick="doEven()">
         
      </div>
      <div class="odd" onclick="doOdd()">
         
      </div>
-     <div class="even">
+     <div class="even" onclick="doEven()">
         
      </div>
   </body>
