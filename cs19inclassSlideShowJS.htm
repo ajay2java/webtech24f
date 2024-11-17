@@ -19,7 +19,12 @@
         var counter = 0;
         function showSlides()
         {
-            var x = document.getElementById("daimg");
+            var y = document.getElementById("daimg");
+            c = Math.floor (Math.random() * myimages.length);
+            
+            y.src = myimages[c];
+            setTimeout("showSlides()", 2000);
+            /*var x = document.getElementById("daimg");
             var y = document.getElementById("myhead");
             x.src = myimages[counter];
             x.style.borderColor = myborder[counter];
@@ -29,7 +34,7 @@
             {
                 counter = 0;
             }
-            setTimeout("showSlides()", 1000);
+            setTimeout("showSlides()", 1000); */
         }
     </script>
 </head>
