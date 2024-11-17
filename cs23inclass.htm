@@ -79,7 +79,14 @@
 
       $("img#img3").click ( function ()
       {
-        $(this).attr("src", "flag.jpg"); // Notice that we can replace “img#img3” with “this” (no quotes)
+        if ( $(this).attr("src") == "usa.jpg" )
+        {
+        $(this).attr("src", "flag.jpg");
+        }
+        else
+        {
+        $(this).attr("src", "usa.jpg");
+        }
       });
 
 
