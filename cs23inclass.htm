@@ -62,6 +62,27 @@
 
       });
 
+      $("h2#h25").click ( function()
+      {
+        $(this).removeClass();
+        $(this).addClass("red");
+        $("h2#h26").removeClass();
+        $("h2#h26").addClass("green"); // the counter part for addClass is removeClass;
+      });
+      $("h2#h26").click ( function()
+      {
+        $("h2#h25").removeClass();
+        $("h2#h25").addClass("green");
+        $(this).removeClass();
+        $(this).addClass("red");
+      });
+
+      $("img#img3").click ( function ()
+      {
+        $(this).attr("src", "flag.jpg"); // Notice that we can replace “img#img3” with “this” (no quotes)
+      });
+
+
 
     })
 
@@ -104,7 +125,7 @@
 	<!-- Start Exercise 4 Here -->
     <img src="baldeagle1.jpg" alt="Sitting Eagle" title="Bald Eagle Sitting"/>
     <img src="baldeagle2.jpg" alt="Flying Eagle" title="Bald Eagle Flying"/>
-       
+    <img id="img3" src="usa.jpg" alt="USA Map Here" title="Map of USA"/>
 
 	<!-- Start Exercise 5 here -->
 
