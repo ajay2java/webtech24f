@@ -15,6 +15,8 @@
 
         .blue {color:navy; text-decoration:underline; font-weight:bold;}
         .green {color:darkgreen; font-family:Lucida Handwriting; font-style:italic;}
+        img#t1 {display: none;}
+        img#t2 {display: none;}
     
 	
 	</style>
@@ -49,7 +51,10 @@
 
       $("h1#h12").click ( function() {
         $("p#p1").slideToggle();
-
+        if ( $("h1#h12").text() == "More About Tigers" )
+          $("h1#h12").text("That is All Folks");
+        else
+          $("h1#h12").text("More About Tigers");
       });
 
       $("img").mouseover ( function() {
@@ -67,7 +72,7 @@
         $(this).removeClass();
         $(this).addClass("red");
         $("h2#h26").removeClass();
-        $("h2#h26").addClass("green");
+        $("h2#h26").addClass("green"); // the counter part for addClass is removeClass;
       });
       $("h2#h26").click ( function()
       {
@@ -89,6 +94,26 @@
         }
       });
 
+      $("h2#h27").click ( function ()
+      {
+        if ( $("h2#h27").text() == "Click to see Tiger 1" )
+          $("h2#h27").text("Click to make Tiger 1 disappear");
+        else
+          $("h2#h27").text("Click to see Tiger 1");
+        $("img#t1").fadeToggle();
+      });
+
+      $("h2#h28").click ( function ()
+      {
+        $("h2#h28").text("Here he is!!!!!");
+        $("img#t2").fadeIn();
+      });
+
+      $("h2#h29").click ( function ()
+      {
+        $("h2#h29").text("Thank you!!!");
+        $("img#t3").fadeOut();
+      });
 
 
     })
@@ -139,6 +164,14 @@
     <h2 id="h25">This is some cool stuff with classes and jquery</h2>
     <h2 id="h26">This is more cool stuff with classes and jquery</h2>
 
+    <h2 id="h27">Click to see Tiger 1</h2>
+    <img id="t1" src="tiger1.jpg" alt="Tiger 1" title="Good Tiger" width="400"/>
+
+    <h2 id="h28">Click to see Tiger 2</h2>
+    <img id="t2" src="tiger2.jpg" alt="Tiger 2" title="Bad Tiger" width="400"/>
+
+    <h2 id="h29">Click to make Tiger 3 Disappear</h2>
+    <img id="t3" src="tiger3.jpg" alt="Tiger 3" title="Dirty Tiger" width="400"/>
     
 	
 
