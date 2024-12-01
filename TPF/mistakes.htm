@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Potential Animation Mistakes</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Describes common mistakes people make when creating animations"/>
+    <meta name="keywords" content="animation, animation mistakes, animation errors, obstacles in animation, beginner issues in animation"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+        p {text-align: center;}    
+        p#info {padding-left: 5%; padding-right: 5%; font-family: 'Times New Roman', Times, serif; font-size: large;}
+        #mistake {text-align: center; color: skyblue; font-size: xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        img#pict {width: 30%; display: block; margin: auto;  margin-top: 3%;}
+        
+        button#startstop {width:150px; height:40px; 
+            background-color:turquoise;; font-family:arial; 
+            color:yellow; border-radius: 5px;}
+        div#b{text-align:center;}
+        h3#track {text-align: center; border: gold ridge 2px; border-left: 5px; border-right: 5px;}
+        
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        var mytitle = new Array("1) Using Transparent Pictures thinking you can animate them", "2) Not Labeling Parts", "3) Being scared of trying!");
+        var myimages = new Array("spongetrans.png", "labeledparts.png", "self_ani.JPG");
+        var mydes = new Array("You cannot just expect to be able to animate without putting in effort in the part of drawing the character part-by-part. I know this may sound inimidating, but trust me, it's actually enjoyable if you try and not worry so much if you were to fail. Failure happens to all of us. My first animations were not very good, but as I continue to draw, animate, and DEBUG my mistakes, I only become better & my confidence grew! You cannot use transparent images as the limbs are not separate, making the Character Animate software unable to separate the parts of the character, instead viewing the image as a whole.", "You must label each part in great detail. This keeps all the info organized so that it will be much eaiser to 'rig' the character once we enter into the animation phase. Moreover, lets say that SpongBob has spots on his face. These will need to be grouped under the 'face background' layer in the pic as they are part of the face, and not a standalone part.", "This picture right here is an animated version of myself. It definitely doesn't quite look like me, but it's way better than what I was able to do some months back. Moral of the story, you automatically fail if you don't try. I was scared to try Adobe Animate some months back, but I took the leap of faith, and look at how far I've come since. For anything in life, you can do whatever you put your mind to. NEVER let anyone tell you otherwise. There will be failures, but the most important thing is how you view those failures. For me, I see failures as an opportunity to improve! This mindset is best suited for longetivty. You always have to start somewhere to become great. So...are you still scared to try something hard?");
+        var counter = 0;
+        var ismoving = 0;
+        var mytimer;
+        function chgImage(x)
+        {
+            var myimg = document.getElementById("pict");
+            var mist = document.getElementById("mistake");
+
+            var info = document.getElementById("info");
+            ismoving = 1;
+            document.getElementById("track").innerHTML = "Slide " + (counter + 1) + " of "+ myimages.length + "";
+            mist.innerHTML = mytitle[counter];
+            myimg.src = myimages[counter];
+            info.innerHTML = mydes[counter];
+            ++ counter;
+            if (counter > myimages.length - 1)
+            {
+                counter = 0;
+            }
+            mytimer = setTimeout("chgImage()", 2000);
+
+        }
+
+        function startStop()
+		{
+			if (ismoving == 0)
+			{
+				document.getElementById("startstop").innerHTML = "Stop";
+                mytimer = setTimeout("chgImage()", 10);
+			}
+			else 
+			{
+				document.getElementById("startstop").innerHTML = "Resume";
+                clearTimeout(mytimer);
+				ismoving = 0;
+			}
+		}
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm" class="active">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+        <div class="row">
+            <h2 id="mistake">1) Using Transparent Pictures thinking you can animate them</h2>
+            <img id="pict" src="spongetrans.png" alt="transparentSponge" title="Transparent Picture of SpongeBob"/>
+
+            <br/>
+            <br/>
+            <div id="b">
+                <button id="startstop" onclick="startStop()">Start</button>
+            </div>
+            <h3 id="track">Slide 1 of 3</h3>
+            <p id="info">
+                You cannot just expect to be able to animate without putting in effort in the part of drawing the character part-by-part. I know this may sound inimidating, but trust me, it's actually enjoyable if you try and not worry so much if you were to fail. Failure happens to all of us. My first animations were not very good, but as I continue to draw, animate, and DEBUG my mistakes, I only become better & my confidence grew! You cannot use transparent images as the limbs are not separate, making the Character Animate software unable to separate the parts of the character, instead viewing the image as a whole.
+            </p>
+        </div>
+  </body>
+</html>

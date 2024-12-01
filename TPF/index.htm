@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>My Creative Mind</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Ajay Subramanian - My Animation Portfolio"/>
+    <meta name="keywords" content="animation, animated characters, Ajay's animations, spongbob animated, learning animation"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+    
+	<style>
+	/* JavaScript Functions: */
+        /* Changing the Style: Any of the "Character Design" & "Character Animation" Pages; Small Images within the table - When the user clicks on an image in the table to go to the next step, that specific image in the table will have a colored border, and the previous image will no longer have a colored border. */
+        /* Changing Text: "Needed Softwares" Page; Slide Number boxes - When the user clicks on any of the slide numbers, the image & text will change in accordance with that slide.*/
+        /* Form Validation: "About Me" Page; Form Submit Button - Form is located at bottom of the page. User must fill out all the info correctly or an alert will appear. */
+        /* Slide Show: "Potential Mistakes" Page; Start/Stop Button - User can click on the button the start/stop the showings of the picture & info for each slide. */
+        /* Animation: "Home" Page; "Press Play" Button - The video game part at the bottom where the chracter moves to a random spot within the rectangle after each second. */
+        /* Use of Conditional Statements: "About Me" Page; Central Image (Question Mark gif or pictures of me) - User clicks the question mark or image to enter a number between 1 and 4 to see a different picture w/ different text. */
+        /* One more Functionality: "Home" Page; "Press Play" Button - When the user plays the game, the images shuffles at a very fast pace (changed every .05 seconds, 30 times) before a random character is essentially "spit out" for the user to play with. */
+
+    /* JQuery Effects: */
+        /* Colorful Text Animation - Top of "Home" Page; This effect is supposed change the color shade of the top text of my home page ("Get ready...to be Amazed!") . */
+        /* Flashing Downward Arrows - Left side of "Home" Page; This effect is supposed to show the downward arrow fading in & out of the screen each second to direct user to scroll down to play the video game. */
+        /* Animated Typing - Top of "Credits" Page; Supposed to type out the text on the screen essentially stating that I own all intellectual property for my website. */
+        
+        video {width: 30%; margin: auto;}
+        #first {text-align: center; font-family: cursive; font-size: xx-large;}
+        h1#second {text-align: center; font-family: cambria; margin-bottom: 0%;}
+        img#arrow {width:150px; position:absolute; left: 30px; top: 500px;}
+
+
+        img#justFrame {border:2px ridge teal; display:block; margin:auto; width:350px; margin-bottom:100px;}
+        img#justFrame {display: none;}
+        p#video {text-align:center;}
+        #vidz {width: 60%;}
+        div#gamescreen {height:440px; width:80%; margin-right:auto; 
+            margin-left:auto; border: 3px solid black;
+            text-align:center; display: none;}
+        h2#pt {float: right; margin-right: 200px; font-family: "times new roman"; font-size:xx-large; display: none;}
+        h2#time {margin-left: 150px; font-family: "times new roman"; font-size:xx-large; display: none;}
+        button#st {display: block; margin: auto; width:200px; height:60px; background-color:skyblue; color:black;}
+        img#someone {width:170px; position:absolute; top:880px; left: 120px; display: none;}
+
+
+
+
+       
+        
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		
+        
+        
+        $(function() {
+            $('.txt').html(function(i, html) {
+                var chars = $.trim(html).split("");
+              
+                return '<span>' + chars.join('</span><span>') + '</span>';
+            });
+
+            function fadeArrow() {
+                $("img#arrow").fadeToggle(1000, fadeArrow);
+            }
+            fadeArrow();
+        });
+        
+
+
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+        
+        var playstatus = 0, mytimer;
+        var randTrack = 0;
+        var point = 0;
+        var timez = 61;
+        function startGameMusic()
+        {
+            
+            playstatus = 1;
+            var music = document.getElementById("music");
+            music.src="gamingmusic.mp3";
+            music.type="audio/mp3";
+            alert("Directions: A random character will be selected... The character will change location after every second. You have 60 seconds to click on the character as many times as you can. Good Luck!");
+            document.getElementById("justFrame").style.display = "block";
+            document.getElementById("second").innerHTML = "Choosing your Character...";
+            gameRando();
+        }
+        function gameRando()
+        {
+            if (document.getElementById("justFrame").src.match("spongebob_ani.JPG") == "spongebob_ani.JPG" )
+            {
+                document.getElementById("justFrame").src = "bulbasaur_ani.JPG";
+            }
+            else if (document.getElementById("justFrame").src.match("bulbasaur_ani.JPG") == "bulbasaur_ani.JPG")
+            {
+                document.getElementById("justFrame").src = "self_ani.JPG";
+            }
+            else
+            {
+                document.getElementById("justFrame").src = "spongebob_ani.JPG";
+            }
+            randTrack += 1;
+            if (randTrack == 30)
+            {
+                document.getElementById("justFrame").style.display = "none";
+                document.getElementById("second").innerHTML = "Let's Goooooo!!! 😎";
+                gameplay1();
+            }
+            else
+                mytimer = setTimeout(gameRando, 50);
+        }
+        
+        function gameplay1()
+        {
+            document.getElementById("gamescreen").style.display = "block";
+            document.getElementById("gamescreen").style.borderColor = "teal";
+            document.getElementById("someone").style.display = "block";
+            if ((Math.floor (Math.random() * 2)) == 0)
+                document.getElementById("someone").src = "sponge_head.png";
+            else if ((Math.floor (Math.random() * 2)) == 1)
+                document.getElementById("someone").src = "bulbasaur_head.png";
+            else
+                document.getElementById("someone").src = "ajay_head.png";
+            
+            document.getElementById("pt").innerHTML = "Score: 0";
+            document.getElementById("pt").style.display = "block";
+            document.getElementById("time").style.display = "block";
+            characterDis();
+        }
+
+        function characterDis()
+        {
+            var toppos = Math.floor (Math.random() * 220) + 880;
+            var leftpos = Math.floor (Math.random() * 850) + 120;
+            document.getElementById("someone").style.top = toppos + "px";
+            document.getElementById("someone").style.left = leftpos + "px";
+
+            mytimer = setTimeout(characterDis, 1000);
+        }
+
+        function addPoint()
+        {
+            point += 1;
+            document.getElementById("pt").innerHTML = "Score: " + point;
+        }
+
+
+        function Decrement() 
+        {
+            if(playstatus == 1)
+            {
+                document.getElementById("time").innerHTML = "Timer: " + timez;
+                if (timez < 0) 
+                {
+                    alert("Time's up! Your score is: " + point + ".");
+                    document.getElementById("time").innerHTML = "";
+                    startstopGame();
+                }
+                else 
+                {
+                    timez--;
+                    setTimeout(Decrement, 1000);
+                }
+            }
+        }
+        
+
+
+        function startstopGame()
+        {
+            if (playstatus == 0)
+			{
+                document.getElementById("st").style.display = "none";
+                document.getElementById("arrow").src = "";
+                document.getElementById("arrow").alt = "";
+                startGameMusic();
+			}
+			else 
+			{
+				clearTimeout(mytimer);
+				playstatus = 0;
+                randTrack = 0;
+                point = 0;
+                timez = 61;
+                document.getElementById("st").style.display = "block";
+                document.getElementById("pt").style.display = "none";
+                document.getElementById("time").style.display = "none";
+                document.getElementById("gamescreen").style.display = "none";
+                document.getElementById("gamescreen").style.borderColor = "black";
+                document.getElementById("second").innerHTML = "Let's Play a Game?";
+                document.getElementById("someone").style.display = "none";
+                document.getElementById("justFrame").style.display = "none";
+                document.getElementById("music").src = "chillvibes.mp3";
+                document.getElementById("music").type="audio/mp3";
+			}
+        }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+        <div id="banner">
+            <h1 id="heading">My Creative Mind</h1>
+        </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm" class="active">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> 
+	
+        <div class="row">
+            <span id="first" class="txt anim-text-flow">Get ready...to be Amazed!</span>
+            <!--<h1 id="first">Get ready...to be Amazed!</h1> -->
+            <p id="video">
+                <video id="vidz" autoplay controls loop>
+                    <source src="sayhi.mp4" type="video/mp4"/>
+                </video>
+            </p>
+            <img id="arrow" src="arrow.png" alt="direct" title="Arrow to direct user scroll down to play the game"/>
+            <h1 id="second">Let's Play a Game?</h1>
+            <br/>
+            <button id="st" onclick="startstopGame(); Decrement()">Press Play</button>
+            <img id="justFrame" src="spongebob_ani.JPG" alt="characterpic" title="Picture of Character"/>
+            <h2 id="pt">Score: 0</h2>
+            <h2 id="time"></h2>
+            <div id="gamescreen">
+                <img onclick = "addPoint()" id="someone" src="ajay_head.png" alt="characterhead" title="Image of Character's Head"/>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            
+        </div>
+
+        <audio id="music" autoplay loop>
+            <source src="chillvibes.mp3" type="audio/mp3"/>
+        </audio>
+  </body>
+</html>

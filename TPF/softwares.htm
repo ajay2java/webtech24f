@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Needed Softwares</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Describes the softwares needed to create animations"/>
+    <meta name="keywords" content="animation, animation software, adobe animator, adobe illustrator, software subscription fee"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+        p {text-align: center;}
+        img#adobeI {width: 70%; display: block; margin: auto;  margin-top: 3%; padding-left: 40%;}
+        img#a1, img#a2 {margin-bottom: 3%; width: 8%;}
+        img#g1, img#g2, img#g3 {width: 10%;}
+
+        #sn {font-family: 'Courier New', Courier, monospace; color: red;}
+        #reason {font-family: 'Courier New', Courier, monospace; color: skyblue;}
+        #cost {font-family: 'Courier New', Courier, monospace; color: lightgreen;}
+        .row2 {display:flex; flex-direction:row;}
+        .about {width:50%; margin:3%; text-align:justify;}
+
+        #noteh {text-align: center; font-family: 'Times New Roman', Times, serif}
+        #note {text-align: center; font-family: 'Times New Roman', Times, serif; padding-left: 10%; padding-right: 10%;}
+        #notesig {float: right; font-family: 'Times New Roman', Times, serif; padding-right: 10%;}
+        
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function chgImage(x)
+        {
+            var adob = document.getElementById("adobeI");
+            var al = document.getElementById("a1");
+            var a2 = document.getElementById("a2");
+            var g1 = document.getElementById("g1");
+            var g2 = document.getElementById("g2");
+            var g3 = document.getElementById("g3");
+            var sn = document.getElementById("sn");
+            var reason = document.getElementById("reason");
+            var cost = document.getElementById("cost");
+            if (x == "g1")
+            {
+                adob.src = "adobei.png";
+                g1.src = "goldone.png";
+                g2.src = "greytwo.png";
+                g3.src = "greythree.png";
+                a1.src = "leftgreyarrow.png";
+                a2.src = "rightgoldarrow.png";
+                sn.innerHTML = "Software Name: Adobe Illustrator";
+                reason.innerHTML = "Reason: To draw out the character, part-by-part.";
+                cost.innerHTML = "Cost: $22.99/month";
+            }
+            else if (x == "g2")
+            {
+                adob.src = "adobea.png";
+                g1.src = "greyone.png";
+                g2.src = "goldtwo.png";
+                g3.src = "greythree.png";
+                a1.src = "leftgoldarrow.png";
+                a2.src = "rightgoldarrow.png";
+                sn.innerHTML = "Software Name: Adobe Animator";
+                reason.innerHTML = "Reason: To 'rig' the character, or give it the ability to move before recording clips of it.";
+                cost.innerHTML = "Cost: $22.99/month";
+            }
+            else
+            {
+                adob.src = "qmark.gif";
+                g1.src = "greyone.png";
+                g2.src = "greytwo.png";
+                g3.src = "goldthree.png";
+                a1.src = "leftgoldarrow.png";
+                a2.src = "rightgreyarrow.png";
+                sn.innerHTML = "Video Editor: 'It's your choice!'";
+                reason.innerHTML = "Reason: To add sound effects to the exported video from Animate.";
+                cost.innerHTML = "Cost: Should be free.";
+            }
+
+        }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm" class="active">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+
+
+
+
+
+        <!---->
+        <!-- NOTE: MY PROPOSAL may have indicated that 'Needed Softwares' page would have a drop down feature Adobe Illustrator, Adobe Character Anmator, and Other softwares, BUT I decided to instead consolidate into one page to not overwhelm the viewer, and honestly, there's not too much info to add on this topic.-->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+
+        <div class="row">  
+            <div class = "row2">
+                <div class="about">
+                    <img id="adobeI" src="adobei.png" alt="AdobeI" title="Adobe Illustrator"/>
+                </div>
+                <div class="about">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h2 id="sn">Software Name: Adobe Illustrator</h2>
+                    <h2 id="reason">Reason: To draw out the character, part-by-part.</h2>
+                    <h2 id="cost">Cost: $22.99/month</h2>
+                </div>
+            </div>
+            <p>
+                <img id="a1" src="leftgreyarrow.png" alt="lgreya" title="Left Grey Arrow"/>
+                <img id="g1" onclick="chgImage(this.id)" src="goldone.png" alt="gslide1" title="Grey Slide 1"/>
+                <img id="g2" onclick="chgImage(this.id)" src="greytwo.png" alt="gslide1" title="Grey Slide 1"/>
+                <img id="g3" onclick="chgImage(this.id)" src="greythree.png" alt="gslide1" title="Grey Slide 1"/>
+                <img id="a2" src="rightgoldarrow.png" alt="rgolda" title="Right Gold Arrow"/>
+            </p>
+            <br/>
+            <h2 id="noteh">A Note from the Author:</h2>
+            <p id="note">While I do understand that Adobe's softwares may be pricy, for any other softwares you choose to use, the same foundational concepts shown on my website still apply to those. Although, you may need to consult additional tutorials to get familiar with the exact intricacies of the software you choose.</p>
+            <h3 id="notesig">- Ajay S.</h3>
+        </div>
+  </body>
+</html>

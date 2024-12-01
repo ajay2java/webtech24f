@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Sitemap</title>
+    <link rel="stylesheet" href="general.css" type="text/css"/>
+    <meta name="description" content="Shows Sitemap for the Animation Website"/>
+    <meta name="keywords" content="animation, animation sitemap, animation table of contents"/>
+    <meta name="author" content="Ajay Subramanian"/>
+
+	<style>
+	/* Your styles go here */
+        #links {display: block; margin: auto; font-size:x-large; color: skyblue; margin-left: 40%; margin-top: 3%;}
+	</style>
+	<script type="text/javascript">
+		function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="banner">
+        <h1 id="heading">My Creative Mind</h1>
+    </div>
+	<!-- Here starts the menu -->
+        <div class="topnav" id="mytopnav">
+            <a href="index.htm">Home</a>
+            <a href="softwares.htm">Needed Softwares</a>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Design</button>
+                <div class="dropdowncontent">
+                    <a href="cartoon_design.htm">Cartoon</a>
+                    <a href="gaming_design.htm">Gaming</a>
+                    <a href="people_design.htm">People</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbutton">Character Animation</button>
+                <div class="dropdowncontent" id="drop2">
+                    <a href="cartoon_ani.htm">Cartoon</a>
+                    <a href="gaming_ani.htm">Gaming</a>
+                    <a href="people_ani.htm">People</a>
+                </div>
+            </div>
+            <a href="mistakes.htm">Potential Mistakes</a>
+            <a href="aboutme.htm">About Me</a>
+            <a href="sitemap.htm" class="active">Sitemap</a>
+            <a href="credits.htm">Credits</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+	
+        <div class="row">
+            <a id="links" href="index.htm">Home Page</a>
+            <br/>
+            <a id="links" href="softwares.htm">Softwares Needed</a>
+            <br/>
+            <a id="links" href="cartoon_design.htm">Cartoon Character Design</a>
+            <br/>
+            <a id="links" href="cartoon_ani.htm">Cartoon Character Animation</a>
+            <br/>
+            <a id="links" href="gaming_design.htm">Gaming Character Design</a>
+            <br/>
+            <a id="links" href="gaming_ani.htm">Gaming Character Animation</a>
+            <br/>
+            <a id="links" href="people_design.htm">People Character Design</a>
+            <br/>
+            <a id="links" href="people_ani.htm">People Character Animation</a>
+            <br/>
+            <a id="links" href="aboutme.htm">About Me</a>
+            <br/>
+            <a id="links" href="credits.htm">Credits</a>
+            <br/>
+        </div>
+  </body>
+</html>
